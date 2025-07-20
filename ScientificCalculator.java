@@ -3,32 +3,33 @@ import java.util.InputMismatchException;
 
 public class ScientificCalculator {
     static double result;
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
-        while (running){
+        while (running) {
             displayMenu();
             System.out.println("Enter your choice: ");
 
-            try{
+            try {
                 int choice = scanner.nextInt();
-                if (choice == 1){
+                if (choice == 1) {
                     performAddition(scanner);
-                }else if(choice == 2){
+                } else if (choice == 2) {
                     performSubtraction(scanner);
-                }else if(choice == 3){
+                } else if (choice == 3) {
                     performMultiplication(scanner);
 
-                }
-                else if (choice == 0){
+                } else if (choice == 4) {
+                    performDivision(scanner);
+                } else if (choice == 0) {
                     System.out.println("EXITING!");
                     running = false;
-                }
-                else{
+                } else {
                     System.out.println("Invalid option");
                 }
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("please enter a valid number");
                 scanner.next();
             }
@@ -37,7 +38,8 @@ public class ScientificCalculator {
 
 
     }
-    public static void displayMenu(){
+
+    public static void displayMenu() {
         System.out.println("--- Scientific Calculator ---");
         System.out.println("1. Add +");
         System.out.println("2. Subtract -");
@@ -60,7 +62,9 @@ public class ScientificCalculator {
 
 
     }
-    public static void performAddition(Scanner scanner){
+
+    public static void performAddition(Scanner scanner) {
+        System.out.println("perform addition");
         System.out.print("Enter first number: ");
         double num1 = scanner.nextDouble();
         System.out.print("Enter second number: ");
@@ -69,7 +73,8 @@ public class ScientificCalculator {
         System.out.println("Result: " + result);
     }
 
-    public static void performSubtraction(Scanner scanner){
+    public static void performSubtraction(Scanner scanner) {
+        System.out.println("perform subtraction");
         System.out.print("Enter first number: ");
         double num1 = scanner.nextDouble();
         System.out.print("Enter second number: ");
@@ -78,7 +83,8 @@ public class ScientificCalculator {
         System.out.println("Result: " + result);
     }
 
-    public static void performMultiplication(Scanner scanner){
+    public static void performMultiplication(Scanner scanner) {
+        System.out.println("perform multiplication");
         System.out.print("Enter first number: ");
         double num1 = scanner.nextDouble();
         System.out.print("Enter second number: ");
@@ -87,4 +93,19 @@ public class ScientificCalculator {
         System.out.println("Result: " + result);
     }
 
+    public static double performDivision(Scanner scanner) {
+        System.out.println("perform division");
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+        if (num2 == 0) {
+            System.out.println("Undefined");
+            return Double.NaN;
+        }
+        result = num1 / num2;
+        System.out.println("Result: " + result);
+        return result;
+
+    }
 }

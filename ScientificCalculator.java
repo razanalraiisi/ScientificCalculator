@@ -30,7 +30,7 @@ public class ScientificCalculator {
                 }else if(choice == 7){
                     calculateSin(scanner);
                 }else if(choice == 8){
-                    //cos
+                    calculateCos(scanner);
                 } else if (choice == 9) {
                     //tan
                 } else if (choice == 10) {
@@ -172,6 +172,15 @@ public class ScientificCalculator {
         System.out.print("Enter number: ");
         double num = scanner.nextDouble();
         result = Math.sin(Math.toRadians(num));
+        System.out.println("Result: " + result);
+        return result;
+    }
+
+    public static double calculateCos(Scanner scanner) {
+        System.out.println("calculate cos()");
+        System.out.print("Enter number: ");
+        double num = scanner.nextDouble();
+        result = Math.cos(Math.toRadians(num));
         System.out.println("Result: " + result);
         return result;
     }

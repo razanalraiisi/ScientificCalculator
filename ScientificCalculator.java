@@ -17,6 +17,9 @@ public class ScientificCalculator {
                     performAddition(scanner);
                 }else if(choice == 2){
                     performSubtraction(scanner);
+                }else if(choice == 3){
+                    performMultiplication(scanner);
+
                 }
                 else if (choice == 0){
                     System.out.println("EXITING!");
@@ -72,6 +75,15 @@ public class ScientificCalculator {
         System.out.print("Enter second number: ");
         double num2 = scanner.nextDouble();
         result = num1 - num2;
+        System.out.println("Result: " + result);
+    }
+
+    public static void performMultiplication(Scanner scanner){
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+        result = num1 * num2;
         System.out.println("Result: " + result);
     }
 

@@ -26,7 +26,7 @@ public class ScientificCalculator {
                 } else if(choice == 5){
                     calculateSquareRoot(scanner);
                 }else if(choice == 6){
-                    //power
+                    calculatePower(scanner);
                 }else if(choice == 7){
                     //sin
                 }else if(choice == 8){
@@ -79,7 +79,7 @@ public class ScientificCalculator {
         System.out.println("2. Subtract -");
         System.out.println("3. Multiply *");
         System.out.println("4. Divide /");
-        System.out.println("5. Square Root x^2");
+        System.out.println("5. Square Root ");
         System.out.println("6. Power (x^y)");
         System.out.println("7. Sine (sin x)");
         System.out.println("8. Cosine (cos x)");
@@ -152,6 +152,17 @@ public class ScientificCalculator {
             return Double.NaN;
         }
         result = Math.sqrt(num);
+        System.out.println("Result: " + result);
+        return result;
+    }
+
+    public static double calculatePower(Scanner scanner) {
+        System.out.println("calculate power");
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number (^y): ");
+        double num2 = scanner.nextDouble();
+        result = Math.pow(num1, num2);
         System.out.println("Result: " + result);
         return result;
     }

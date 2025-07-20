@@ -23,6 +23,40 @@ public class ScientificCalculator {
 
                 } else if (choice == 4) {
                     performDivision(scanner);
+                } else if(choice == 5){
+                    calculateSquareRoot(scanner);
+                }else if(choice == 6){
+                    //power
+                }else if(choice == 7){
+                    //sin
+                }else if(choice == 8){
+                    //cos
+                } else if (choice == 9) {
+                    //tan
+                } else if (choice == 10) {
+                    //natural log
+
+                } else if (choice == 11) {
+                    //log base 10
+
+                } else if (choice == 12) {
+                    //abs
+
+                } else if (choice == 13) {
+                    //round
+
+                } else if (choice == 14) {
+                    //ceil
+
+                } else if (choice == 15) {
+                    //floor
+
+                } else if (choice == 16) {
+                    //min
+
+                } else if (choice == 17) {
+                    //max
+
                 } else if (choice == 0) {
                     System.out.println("EXITING!");
                     running = false;
@@ -62,7 +96,7 @@ public class ScientificCalculator {
 
 
     }
-
+//basic arithmetic
     public static void performAddition(Scanner scanner) {
         System.out.println("perform addition");
         System.out.print("Enter first number: ");
@@ -107,5 +141,18 @@ public class ScientificCalculator {
         System.out.println("Result: " + result);
         return result;
 
+    }
+
+    public static double calculateSquareRoot(Scanner scanner) {
+        System.out.println("calculate square root");
+        System.out.print("Enter first number: ");
+        double num = scanner.nextDouble();
+        if (num < 0) {
+            System.out.println("Error: Cannot calculate square root of a negative number.");
+            return Double.NaN;
+        }
+        result = Math.sqrt(num);
+        System.out.println("Result: " + result);
+        return result;
     }
 }

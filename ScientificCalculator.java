@@ -28,7 +28,7 @@ public class ScientificCalculator {
                 }else if(choice == 6){
                     calculatePower(scanner);
                 }else if(choice == 7){
-                    //sin
+                    calculateSin(scanner);
                 }else if(choice == 8){
                     //cos
                 } else if (choice == 9) {
@@ -142,10 +142,10 @@ public class ScientificCalculator {
         return result;
 
     }
-
+//scintific operations
     public static double calculateSquareRoot(Scanner scanner) {
         System.out.println("calculate square root");
-        System.out.print("Enter first number: ");
+        System.out.print("Enter number: ");
         double num = scanner.nextDouble();
         if (num < 0) {
             System.out.println("Error: Cannot calculate square root of a negative number.");
@@ -163,6 +163,15 @@ public class ScientificCalculator {
         System.out.print("Enter second number (^y): ");
         double num2 = scanner.nextDouble();
         result = Math.pow(num1, num2);
+        System.out.println("Result: " + result);
+        return result;
+    }
+
+    public static double calculateSin(Scanner scanner) {
+        System.out.println("calculate sin()");
+        System.out.print("Enter number: ");
+        double num = scanner.nextDouble();
+        result = Math.sin(Math.toRadians(num));
         System.out.println("Result: " + result);
         return result;
     }

@@ -32,7 +32,7 @@ public class ScientificCalculator {
                 }else if(choice == 8){
                     calculateCos(scanner);
                 } else if (choice == 9) {
-                    //tan
+                    calculateTan(scanner);
                 } else if (choice == 10) {
                     //natural log
 
@@ -181,6 +181,22 @@ public class ScientificCalculator {
         System.out.print("Enter number: ");
         double num = scanner.nextDouble();
         result = Math.cos(Math.toRadians(num));
+        System.out.println("Result: " + result);
+        return result;
+    }
+
+    public static double calculateTan(Scanner scanner) {
+        System.out.println("calculate tan()");
+        System.out.print("Enter number: ");
+        double num = scanner.nextDouble();
+        double radians = Math.toRadians(num);
+
+        if (Math.abs(Math.cos(radians)) < 1e-10) {
+            System.out.println("Error: Tangent undefined at " + num + " degrees.");
+            return Double.NaN;
+        }
+
+        result = Math.tan(radians);
         System.out.println("Result: " + result);
         return result;
     }

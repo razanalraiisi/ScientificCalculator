@@ -49,7 +49,7 @@ public class ScientificCalculator {
                     performCeiling(scanner);
 
                 } else if (choice == 15) {
-                    //floor
+                    performFloor(scanner);
 
                 } else if (choice == 16) {
                     //min
@@ -251,6 +251,14 @@ public class ScientificCalculator {
         double num = scanner.nextDouble();
 
         double result = Math.ceil(num);
+        System.out.println("Result: " + result);
+    }
+    public static void performFloor(Scanner scanner) {
+        System.out.println("floor a number");
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+
+        double result = Math.floor(num);
         System.out.println("Result: " + result);
     }
 

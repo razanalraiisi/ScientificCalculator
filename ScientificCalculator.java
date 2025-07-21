@@ -34,7 +34,7 @@ public class ScientificCalculator {
                 } else if (choice == 9) {
                     calculateTan(scanner);
                 } else if (choice == 10) {
-                    //natural log
+                    performNaturalLogarithm(scanner);
 
                 } else if (choice == 11) {
                     //log base 10
@@ -200,4 +200,18 @@ public class ScientificCalculator {
         System.out.println("Result: " + result);
         return result;
     }
+
+    public static void performNaturalLogarithm(Scanner scanner) {
+        System.out.println("natural log");
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+
+        if (num <= 0) {
+            System.out.println("Error: Natural log is undefined for zero or negative numbers.");
+        } else {
+            double result = Math.log(num);
+            System.out.println("Result: " + result);
+        }
+    }
+
 }

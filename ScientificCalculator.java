@@ -43,7 +43,7 @@ public class ScientificCalculator {
                     performAbsoluteValue(scanner);
 
                 } else if (choice == 13) {
-                    //round
+                    performRound(scanner);
 
                 } else if (choice == 14) {
                     //ceil
@@ -228,13 +228,23 @@ public class ScientificCalculator {
     }
 
     public static void performAbsoluteValue(Scanner scanner) {
-        System.out.println("perform absolute vale");
+        System.out.println("absolute vale");
         System.out.print("Enter a number: ");
         double num = scanner.nextDouble();
 
         double result = Math.abs(num);
         System.out.println("Result: " + result);
     }
+
+    public static void performRound(Scanner scanner) {
+        System.out.println("round a number");
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+
+        long result = Math.round(num);
+        System.out.println("Result: " + result);
+    }
+
 
 
 

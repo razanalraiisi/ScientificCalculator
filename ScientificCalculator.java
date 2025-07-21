@@ -37,7 +37,7 @@ public class ScientificCalculator {
                     performNaturalLogarithm(scanner);
 
                 } else if (choice == 11) {
-                    //log base 10
+                    performLogBase10(scanner);
 
                 } else if (choice == 12) {
                     //abs
@@ -213,5 +213,19 @@ public class ScientificCalculator {
             System.out.println("Result: " + result);
         }
     }
+
+    public static void performLogBase10(Scanner scanner) {
+        System.out.println("perform log base 10");
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+
+        if (num <= 0) {
+            System.out.println("Error: Log base 10 is undefined for zero or negative numbers.");
+        } else {
+            double result = Math.log10(num);
+            System.out.println("Result: " + result);
+        }
+    }
+
 
 }

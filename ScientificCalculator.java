@@ -40,7 +40,7 @@ public class ScientificCalculator {
                     performLogBase10(scanner);
 
                 } else if (choice == 12) {
-                    //abs
+                    performAbsoluteValue(scanner);
 
                 } else if (choice == 13) {
                     //round
@@ -226,6 +226,16 @@ public class ScientificCalculator {
             System.out.println("Result: " + result);
         }
     }
+
+    public static void performAbsoluteValue(Scanner scanner) {
+        System.out.println("perform absolute vale");
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+
+        double result = Math.abs(num);
+        System.out.println("Result: " + result);
+    }
+
 
 
 }

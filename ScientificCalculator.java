@@ -55,7 +55,7 @@ public class ScientificCalculator {
                     performMinimum(scanner);
 
                 } else if (choice == 17) {
-                    //max
+                    performMaximum(scanner);
 
                 } else if (choice == 0) {
                     System.out.println("EXITING!");
@@ -273,6 +273,17 @@ public class ScientificCalculator {
         System.out.println("Minimum: " + result);
     }
 
+    public static void performMaximum(Scanner scanner) {
+        System.out.println("max");
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+
+        double result = Math.max(num1, num2);
+        System.out.println("Maximum: " + result);
+    }
 
 
 

@@ -52,7 +52,7 @@ public class ScientificCalculator {
                     performFloor(scanner);
 
                 } else if (choice == 16) {
-                    //min
+                    performMinimum(scanner);
 
                 } else if (choice == 17) {
                     //max
@@ -261,6 +261,18 @@ public class ScientificCalculator {
         double result = Math.floor(num);
         System.out.println("Result: " + result);
     }
+    public static void performMinimum(Scanner scanner) {
+        System.out.println("min");
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+
+        double result = Math.min(num1, num2);
+        System.out.println("Minimum: " + result);
+    }
+
 
 
 

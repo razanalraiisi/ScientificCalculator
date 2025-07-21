@@ -46,7 +46,7 @@ public class ScientificCalculator {
                     performRound(scanner);
 
                 } else if (choice == 14) {
-                    //ceil
+                    performCeiling(scanner);
 
                 } else if (choice == 15) {
                     //floor
@@ -244,6 +244,16 @@ public class ScientificCalculator {
         long result = Math.round(num);
         System.out.println("Result: " + result);
     }
+
+    public static void performCeiling(Scanner scanner) {
+        System.out.println("ceiling a number");
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+
+        double result = Math.ceil(num);
+        System.out.println("Result: " + result);
+    }
+
 
 
 
